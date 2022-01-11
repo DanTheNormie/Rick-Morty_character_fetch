@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeRefresh"
+    tools:context=".ui.view.CharacterDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/epoxy_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:background="@color/transparent"
+            app:itemBackground="@color/transparent"
+            app:elevation="0dp"
+            android:focusedByDefault="false"
+            app:itemIconTint="@drawable/bottom_nav_icon_color_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_nav_menu" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/species_tv"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="16dp"-->
+
+    <!--        android:textColor="?attr/colorOnBackground"-->
+    <!--        android:textSize="22sp"-->
+    <!--        android:textStyle="italic"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/divider"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/origin_value_tv"-->
+    <!--        android:text="@string/species" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/origin_value_tv"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        tools:text="Earth"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/origin_tv"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/origin_tv" />-->
+
+
+    <!--    <View-->
+    <!--        android:id="@+id/divider"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_margin="16dp"-->
+    <!--        android:background="?attr/actionBarDivider"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/status_tv" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/image_iv"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        app:layout_constraintDimensionRatio="16:9"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        tools:src="@tools:sample/avatars" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/name_tv"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="16dp"-->
+    <!--        android:textColor="?attr/colorOnSurface"-->
+    <!--        android:textSize="28sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/gender_iv"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/image_iv"-->
+    <!--        tools:text="Morty Smith" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/gender_iv"-->
+    <!--        android:layout_width="36dp"-->
+    <!--        android:layout_height="36dp"-->
+    <!--        android:layout_margin="16dp"-->
+    <!--        tools:src="@drawable/ic_baseline_male_24"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/image_iv" />-->
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/species_value_tv"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/human"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/species_tv"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/species_tv" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/origin_tv"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="16dp"-->
+
+    <!--        android:textColor="?attr/colorOnBackground"-->
+    <!--        android:textSize="22sp"-->
+    <!--        android:textStyle="italic"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/divider"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/divider"-->
+    <!--        android:text="@string/origin" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/status_tv"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Alive"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/name_tv"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/name_tv" />-->
+
+    <!--    <androidx.constraintlayout.widget.Group-->
+    <!--        android:id="@+id/c_data_group"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:constraint_referenced_ids="-->
+    <!--        status_tv,-->
+    <!--        species_tv,divider,-->
+    <!--        species_value_tv,-->
+    <!--        name_tv,origin_tv,-->
+    <!--        image_iv,gender_iv,-->
+    <!--        origin_value_tv"-->
+    <!--        tools:layout_editor_absoluteX="50dp"-->
+    <!--        tools:layout_editor_absoluteY="110dp" />-->
